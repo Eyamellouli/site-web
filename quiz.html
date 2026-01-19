@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site personnel — Eya Mellouli</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Nom du site">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Eya</span>
+      </div>
+
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html" data-page="index.html">Accueil</a></li>
+          <li><a href="competences.html" data-page="competences.html">Compétences</a></li>
+          <li><a href="experiences.html" data-page="experiences.html">Expériences</a></li>
+          <li><a href="parcours.html" data-page="parcours.html">Parcours</a></li>
+          <li><a href="matieres.html" data-page="matieres.html">Matières</a></li>
+          <li><a href="passions.html" data-page="passions.html">Passions</a></li>
+          <li><a class="active" href="quiz.html" data-page="quiz.html">Quiz</a></li>
+          <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+          <li><a href="temoignage-iit.html" data-page="temoignage-iit.html">IIT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="quiz-classic">
+    <div class="container">
+      <section class="card" aria-label="Titre">
+        <h1 style="margin:0">Quiz Programmation Web</h1>
+        <p class="meta">12 questions — la note et les réponses correctes s’affichent après validation.</p>
+      </section>
+
+      <section class="card" style="margin-top:16px" aria-label="Quiz">
+        <form id="quizForm" class="quiz-form" novalidate>
+          <div id="quizContainer"></div>
+
+          <div class="quiz-actions">
+            <button class="btn primary" type="submit">Valider</button>
+            <button class="btn" type="button" id="resetBtn">Réinitialiser</button>
+          </div>
+
+          <div id="resultBox" class="quiz-result" style="display:none;">
+            <h2 id="scoreText" style="margin:0 0 6px"></h2>
+            <p id="mentionText" class="meta" style="margin:0"></p>
+          </div>
+
+          <div id="answersBox" class="quiz-answers" style="display:none;"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>Contact</strong> — <a href="mailto:eya.mellouli003@gmail.com">eya.mellouli003@gmail.com</a> • +216 26 182 900</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>

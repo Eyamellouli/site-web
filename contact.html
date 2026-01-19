@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site personnel — Eya Mellouli</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Nom du site">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Eya</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html" data-page="index.html">Accueil</a></li>
+          <li><a href="competences.html" data-page="competences.html">Compétences</a></li>
+          <li><a href="experiences.html" data-page="experiences.html">Expériences</a></li>
+          <li><a href="parcours.html" data-page="parcours.html">Parcours</a></li>
+          <li><a href="matieres.html" data-page="matieres.html">Matières</a></li>
+          <li><a href="passions.html" data-page="passions.html">Passions</a></li>
+          <li><a href="quiz.html" data-page="quiz.html">Quiz</a></li>
+          <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+          <li><a href="temoignage-iit.html" data-page="temoignage-iit.html">IIT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="card" aria-label="Titre">
+        <h1 style="margin:0">Contact</h1>
+        <p class="meta">Formulaire HTML : </p>
+      </section>
+
+      <section class="card" style="margin-top:16px" aria-label="Formulaire">
+        <form id="contactForm">
+          <div class="form-row">
+            <div>
+              <label for="nom">Nom</label>
+              <input id="nom" name="nom" type="text" placeholder="Votre nom" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="ex: nom@email.com" required />
+            </div>
+          </div>
+
+          <label for="sujet">Sujet</label>
+          <input id="sujet" name="sujet" type="text" placeholder="Objet du message" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Écrivez votre message..." required></textarea>
+
+          <button class="btn primary" type="submit" style="margin-top:12px">Envoyer</button>
+          <div id="ok" class="alert">Votre application mail va s’ouvrir pour envoyer le message.</div>
+          <div id="err" class="alert error">Impossible d’ouvrir l’email. Copiez le message et envoyez-le manuellement.</div>
+        </form>
+
+        <div class="card" style="margin-top:16px; box-shadow:none">
+          <h2>Mes coordonnées</h2>
+        <ul class="ul">
+  <li><strong>Email</strong> : <a href="mailto:eya.mellouli003@gmail.com">eya.mellouli003@gmail.com</a></li>
+
+  <!-- Téléphone NON cliquable -->
+  <li><strong>Téléphone</strong> : +216 26 182 900</li>
+
+  <!-- LinkedIn CLIQUABLE -->
+  <li>
+    <strong>LinkedIn</strong> :
+    <a href="https://www.linkedin.com/in/eya-mellouli/" target="_blank" rel="noopener">
+      Eya Mellouli
+    </a>
+  </li>
+</ul>
+
+
+        </div>
+      </section>
+
+      <script>
+        const form = document.getElementById('contactForm');
+        const ok = document.getElementById('ok');
+        const err = document.getElementById('err');
+
+        form.addEventListener('submit', (e)=>{
+          e.preventDefault();
+          ok.style.display='none';
+          err.style.display='none';
+
+          const nom = document.getElementById('nom').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const sujet = document.getElementById('sujet').value.trim();
+          const message = document.getElementById('message').value.trim();
+
+          const body = `Nom: ${nom}\nEmail: ${email}\n\n${message}`;
+          const mailto = `mailto:eya.mellouli003@gmail.com?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(body)}`;
+
+          try{
+            window.location.href = mailto;
+            ok.style.display='block';
+          }catch(ex){
+            err.style.display='block';
+          }
+        });
+      </script>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>Contact</strong> — <a href="mailto:eya.mellouli003@gmail.com">eya.mellouli003@gmail.com</a> • +216 26 182 900</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>site web</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Nom du site">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Eya</span>
+      </div>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html" data-page="index.html">Accueil</a></li>
+          <li><a href="competences.html" data-page="competences.html">Compétences</a></li>
+          <li><a href="experiences.html" data-page="experiences.html">Expériences</a></li>
+          <li><a href="parcours.html" data-page="parcours.html">Parcours</a></li>
+          <li><a href="matieres.html" data-page="matieres.html">Matières</a></li>
+          <li><a href="passions.html" data-page="passions.html">Passions</a></li>
+          <li><a href="quiz.html" data-page="quiz.html">Quiz</a></li>
+          <li><a href="contact.html" data-page="contact.html">Contact</a></li>
+          <li><a href="temoignage-iit.html" data-page="temoignage-iit.html">IIT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero" aria-label="Présentation">
+        <div class="avatar">
+          <img src="assets/img/eya.png" alt="image"></div>
+        <div>
+          <h1>Eya Mellouli</h1>
+          <p>
+            Étudiante en 1ère année du cycle ingénieur en informatique à l’Institut International de Technologie (IIT), je recherche un stage d’été afin de mettre en pratique mes connaissances, d’enrichir mon expérience professionnelle et de contribuer à des projets innovants.
+          </p>
+          <div class="btns" role="group" aria-label="Raccourcis">
+            <a class="btn primary" href="parcours.html">Mon parcours</a>
+            <a class="btn" href="experiences.html">Mes expériences</a>
+            <a class="btn" href="quiz.html">Quiz Web</a>
+          </div>
+          <div class="badges" aria-label="Réseaux">
+            <span class="badge">Email : eya.mellouli003@gmail.com</span>
+            <span class="badge">LinkedIn : Eya Mellouli</span>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-top:22px" aria-label="Compétences clés">
+        <div class="card">
+          <h2>Compétences clés</h2>
+          <ul class="ul">
+            <li><strong>Web</strong> : HTML, CSS, JavaScript, PHP, MySQL</li>
+            <li><strong>Programmation</strong> : Python, C, C++, Java, SQL</li>
+            <li><strong>Mobile</strong> : Flutter</li>
+            <li><strong>Projet stage</strong> : React.js, Spring Boot, REST API, MySQL</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid two" style="margin-top:16px" aria-label="Dernières expériences">
+        <article class="card">
+          <h3>Stage Développement Web — Clinisys</h3>
+          <div class="meta">Fév. 2025 → Juin 2025</div>
+          <p>
+            Développement d’une application web de gestion des stages et d’affectation des projets aux candidats (React.js + Spring Boot),
+            avec génération d’attestations, tests et déploiement.
+          </p>
+          <div class="badges">
+            <span class="badge">React.js</span><span class="badge">Spring Boot</span><span class="badge">MySQL</span><span class="badge">REST API</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Stage Développement Data — Cypheme France</h3>
+          <div class="meta">Juin 2024 → Juil. 2024</div>
+          <p>
+            Collecte et analyse de données pour l’entraînement d’un modèle de détection de produits contrefaits.
+          </p>
+          <div class="badges">
+            <span class="badge">Python</span><span class="badge">SQL</span><span class="badge">Machine Learning</span>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>Contact</strong> — <a href="mailto:eya.mellouli003@gmail.com">eya.mellouli003@gmail.com</a> • +216 26 182 900</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

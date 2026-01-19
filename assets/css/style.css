@@ -1,0 +1,292 @@
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --text:#1f2a37;
+  --muted:#6b7280;
+  --primary:#1e6bd6;
+  --primary-2:#0f4fb3;
+  --border:#e5e7eb;
+  --shadow:0 10px 25px rgba(16,24,40,.08);
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.55;
+}
+img{max-width:100%;display:block}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Layout */
+.container{width:min(1050px,92%);margin:0 auto}
+main{padding:40px 0 20px}
+
+/* Navbar */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 0;
+  gap:18px;
+}
+.brand{
+  display:flex;align-items:center;gap:10px;
+  font-weight:800;
+  letter-spacing:.2px;
+  color:var(--primary-2);
+}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--primary)}
+
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;flex-wrap:wrap;justify-content:flex-end}
+.nav a{
+  display:inline-block;
+  padding:8px 10px;
+  border-radius:10px;
+  color:#0b2a53;
+  font-weight:600;
+}
+.nav a.active,.nav a:hover{background:#eaf2ff;color:var(--primary-2);text-decoration:none}
+
+/* Hero */
+.hero{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  gap:22px;
+  align-items:center;
+  margin-top:10px;
+}
+.avatar{
+  width:140px;
+  height:140px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#dbeafe,#f0f9ff);
+  border:1px solid var(--border);
+  box-shadow:var(--shadow);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.hero h1{margin:0 0 8px;font-size:36px;line-height:1.15}
+.hero p{margin:0;color:var(--muted)}
+
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:10px 14px;border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--card);
+  font-weight:700;
+}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+
+/* Cards */
+.grid{display:grid;gap:16px}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;}
+  .grid.two{grid-template-columns:1fr}
+  .nav ul{justify-content:flex-start}
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px 18px;
+}
+.card h2{margin:0 0 6px;font-size:22px}
+.card h3{margin:0 0 6px;font-size:18px;color:var(--primary-2)}
+.card p{margin:8px 0;color:#263445}
+.meta{color:var(--muted);font-weight:600;font-size:14px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{
+  font-size:12px;font-weight:700;
+  padding:6px 10px;border-radius:999px;
+  background:#eef5ff;color:#0b2a53;border:1px solid #dbeafe;
+}
+
+/* Lists */
+.ul{margin:10px 0 0;padding-left:18px}
+.ul li{margin:6px 0}
+
+/* Footer */
+footer{
+  border-top:1px solid var(--border);
+  padding:22px 0;
+  color:var(--muted);
+  background:#ffffff;
+}
+.footer-grid{display:grid;gap:12px}
+
+/* Forms (global) */
+label{display:block;margin:10px 0 6px;font-weight:700}
+input,textarea,select{
+  width:100%;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  outline:none;
+  background:#fff;
+}
+input:focus,textarea:focus,select:focus{
+  border-color:#9cc2ff;
+  box-shadow:0 0 0 4px rgba(30,107,214,.12)
+}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:700px){.form-row{grid-template-columns:1fr}}
+
+.alert{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #d1fae5;
+  background:#ecfdf5;
+  color:#065f46;
+  display:none;
+}
+.alert.error{border-color:#fecaca;background:#fef2f2;color:#7f1d1d}
+
+/* =========================
+   Quiz - Style QCM classique + attractif
+   (avec FIX qui annule les règles globales de forms)
+   ========================= */
+.quiz-classic .card{
+  box-shadow: none;
+}
+
+.quiz-form{
+  margin-top: 10px;
+}
+
+/* Fieldset comme "papier" */
+.quiz-fieldset{
+  border: 1px solid #cfd6e3;
+  border-radius: 8px;
+  padding: 16px 16px 10px;
+  background: #fff;
+  text-align: left;
+}
+
+.quiz-fieldset + .quiz-fieldset{
+  margin-top: 14px;
+}
+
+.quiz-fieldset legend{
+  font-weight: 900;
+  padding: 0 6px;
+  color: #111827;
+}
+
+/* ===== FIX IMPORTANT: annuler les styles global input/label pour le quiz ===== */
+.quiz-classic label{
+  display:inline;      /* annule label block */
+  margin:0;            /* annule margin 10px */
+  font-weight:600;
+}
+
+/* radio ne doit pas être width:100% */
+.quiz-classic input[type="radio"]{
+  width:auto;
+  padding:0;
+  border-radius:0;
+  border:none;
+  box-shadow:none;
+  outline:none;
+  background:transparent;
+}
+
+/* ===== Options ===== */
+.quiz-option{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 12px 10px;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+
+.quiz-option + .quiz-option{
+  border-top: 1px solid #eef2f7;
+}
+
+.quiz-option:hover{
+  background: #f7fbff;
+}
+
+.quiz-option input[type="radio"]{
+  margin: 0;
+  transform: translateY(1px);
+}
+
+.quiz-option label{
+  cursor: pointer;
+  color: #111827;
+  line-height: 1.35;
+}
+
+/* Option sélectionnée (Chrome récent) */
+.quiz-option:has(input[type="radio"]:checked){
+  background: #eef5ff;
+}
+
+/* Boutons */
+.quiz-actions{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+/* Résultats */
+.quiz-result, .quiz-answers{
+  border: 1px solid #cfd6e3;
+  border-radius: 8px;
+  padding: 14px;
+  background: #fff;
+  margin-top: 16px;
+}
+
+/* Correction */
+.quiz-option.correct{
+  background: #f0fdf4 !important;
+}
+
+.quiz-option.wrong{
+  background: #fff1f2 !important;
+}
+
+/* =========================
+   Footer sans espace bizarre (toutes pages)
+   ========================= */
+html, body{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  flex: 1;
+}

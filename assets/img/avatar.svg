@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1e6bd6"/>
+      <stop offset="1" stop-color="#0f4fb3"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" rx="60" fill="url(#g)"/>
+  <circle cx="200" cy="150" r="70" fill="rgba(255,255,255,0.95)"/>
+  <path d="M85 330c20-70 85-95 115-95s95 25 115 95" fill="rgba(255,255,255,0.95)"/>
+  <text x="200" y="385" text-anchor="middle" font-family="Arial" font-size="22" fill="rgba(255,255,255,0.9)">Eya Mellouli</text>
+</svg>
